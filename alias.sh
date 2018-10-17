@@ -8,7 +8,7 @@ echo -e "\n \033[0;39m Register: git reset --hard \033[0m \n"
 git config --global alias.rh "reset --hard"
 
 echo -e "\n \033[0;39m Register: git log \033[0m \n"
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%C(yellow)[%ce]%Creset' --abbrev-commit"
 
 echo -e "\n \033[0;39m Register: git pull \033[0m \n"
 git config --global alias.pul "pull"
