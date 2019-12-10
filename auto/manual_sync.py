@@ -15,8 +15,8 @@ DIR_TUPLE = ("E:\\Test1", "E:\\Docs")
 def auto_sync(path):
     os.chdir(path)
     os.system(GIT_ALIAS_STATUS)
-    print "\033[44;36m%s \033[0m" % os.getcwd()
-    print "========================================\n\n"
+    print ("\033[44;36m%s \033[0m" % os.getcwd())
+    print ("========================================\n\n")
 
 for path in DIR_TUPLE:
     auto_sync(path)

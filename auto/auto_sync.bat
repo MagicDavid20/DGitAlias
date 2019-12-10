@@ -1,4 +1,5 @@
 @echo off
-Python auto_sync.py
+
+Python3 auto_sync.py
 
 Pause

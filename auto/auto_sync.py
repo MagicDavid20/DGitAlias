@@ -23,8 +23,8 @@ def auto_sync(name, path):
     os.chdir(path)
     os.system(GIT_ALIAS_STATUS)
     os.system(GIT_ALIAS_GC)
-    print "\033[44;36m%s \033[0m" % os.getcwd()
-    print "========================================\n\n"
+    print ("\033[44;36m%s \033[0m" % os.getcwd())
+    print ("========================================\n\n")
 
 cwd = os.getcwd()
 files = os.listdir(cwd)
