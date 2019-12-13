@@ -5,6 +5,7 @@ import tkinter
 import tkinter.filedialog
 import json
 import os
+import _thread
 
 JSON_PATH = "config.json"
 
@@ -106,12 +107,13 @@ def isGitDir(path):
     return False
 
 def gitOperation(path, opertaion):
+    t = _thread.start_new_thread(doGitOperation, (path, opertaion,))
 
+def doGitOperation(path, opertaion):
     os.chdir(path)
     os.system(opertaion)
     print ("\033[44;36m%s \033[0m" % os.getcwd())
     print ("\n\n")
-
 
 config_dict = loadJson(JSON_PATH)
 root = tkinter.Tk()
